@@ -16,6 +16,23 @@ function bubbleSort(array) {
     // implemented in javascript language.
   }
   
+  /*  
+      Alternatively, it could be done also like this:
+      function bubbleSort(array) {
+          for (let i = 0; i < array.length; i++) {
+            let sorted = true;
+            for (let j = 0; j < array.length - i - 1; j++) // the last i elements in array are already sorted
+              if (array[j] > array[j+1]) {
+                sorted = false;
+                [array[j],array[j+1]] = [array[j+1],array[j]]; // swap elements
+              }
+            if (sorted) break;
+          }
+          return array;
+      }
+
+
+  */
   /*
     let a = [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92];
     bubbleSort(a)
